@@ -50,6 +50,30 @@ public class Operators {
 	++
 	--
 	
+	conditional		true/false
+	x==y
+	>
+	<
+	!=
+	<=
+	>=
+	!>
+	!<
+	
+	logical operator
+	AND	&&
+	OR	||
+	NOT	!
+	
+	A	B	A&&B	A||B
+	0	0	0		0
+	0	1	0		1
+	1	0	0		1
+	1	1	1		1
+	
+	A	!A
+	0	1
+	1	0
 	
 	
 	
