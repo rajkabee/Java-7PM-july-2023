@@ -6,13 +6,13 @@ public class Bin2Dec {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a binary value: ");
-		int bin = sc.nextInt();
+		int bin = sc.nextInt();		//11101
 		int dec=0, rem, pv=1;
-		while(bin>0) {
-			rem=bin%10;
-			dec=dec+rem*pv;
-			pv*=2;
-			bin/=10;
+		while(bin>0) {				//false
+			rem=bin%10;				//1
+			dec=dec+rem*pv;			//29
+			pv*=2;					//32
+			bin/=10;				//0
 		}
 		System.out.println("Decimal Value: "+dec);
 		
