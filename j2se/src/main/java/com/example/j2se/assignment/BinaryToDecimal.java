@@ -19,7 +19,8 @@ public static void main(String[] args) {
 	while(bin!=0) {
 	rem=bin%10;
 	bin = bin/10;
-	dec = (int) (dec + (rem * Math.pow(2,i)));
+	dec = (int) (dec + (rem * Math.pow(2,i)));  //dec=dec+rem*pv
+												//pv*=2
 	++i;
 	}
 	System.out.println(dec);
