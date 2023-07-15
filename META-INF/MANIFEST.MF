@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Java-7PM-july-2023
+Bundle-SymbolicName: Java-7PM-july-2023
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Automatic-Module-Name: Java.7PM.july
