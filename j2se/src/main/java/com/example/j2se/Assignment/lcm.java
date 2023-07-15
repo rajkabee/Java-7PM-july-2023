@@ -1,5 +1,4 @@
-
-public class lcm {
+package boot.example.j2se.Assignment;
 	import java.util.Scanner;
 	public class LCM {
 		 public static void main(String[] args)    

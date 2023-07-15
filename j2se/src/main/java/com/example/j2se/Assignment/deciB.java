@@ -1,5 +1,4 @@
-
-public class deciB {
+package boot.example.j2se.Assignment;
 	import java.util.Scanner;
 	public class deciB {
 

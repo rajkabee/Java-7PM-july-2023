@@ -1,6 +1,5 @@
-import boot.example.j2se.day5.Dog;
-import boot.example.j2se.day5.Lion;
-import boot.example.j2se.day5.animal;
+
+package boot.example.j2se.Assignment;
 
 public class Test1 {
 	abstract class animal {

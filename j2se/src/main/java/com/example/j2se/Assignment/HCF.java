@@ -1,5 +1,5 @@
+package boot.example.j2se.Assignment;
 
-public class HCF {
 	import java.util.Scanner;
 	 public class HCF
 	 {

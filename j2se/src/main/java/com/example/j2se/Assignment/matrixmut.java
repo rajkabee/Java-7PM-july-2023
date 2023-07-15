@@ -1,5 +1,5 @@
+package boot.example.j2se.Assignment;
 
-public class matrixmut {
 	public class matrixmut {
 
 		public static void main(String args[]){  

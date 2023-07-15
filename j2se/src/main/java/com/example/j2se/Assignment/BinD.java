@@ -1,8 +1,9 @@
+package boot.example.j2se.Assignment;
+
+import java.util.Scanner;
 
 public class BinD {
 
-	import java.util.Scanner;
-	public class binD {
 
 		 public static void main(String[] args) {
 		        Scanner scanner = new Scanner(System.in);
