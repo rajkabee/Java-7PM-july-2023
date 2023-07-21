@@ -1,0 +1,30 @@
+<people>
+<person>
+	<id>123</id>
+	<name>Shubham Hamal</name>
+	<address>
+		<country>Nepal</country>
+		<city>Pokhara</city>
+	</address>
+</person>
+<person>
+	<id>1234</id>
+	<name>Shubham Hamal</name>
+	<address>
+		<country>Nepal</country>
+		<city>Pokhara</city>
+	</address>
+</person>
+</people>
+
+<!--
+{
+person:{
+	'id':'123',
+	'name'': 'Shubham Hamal',
+	'address':{
+		'country':'nepal',
+		'city':'pokhara'
+	}
+}
+-->
