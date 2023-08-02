@@ -13,6 +13,7 @@ public class MyFrame extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("logo.png"));
 		setBounds(250, 100, 800, 500);
 		//setExtendedState(JFrame.MAXIMIZED_BOTH);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
 	}
 	
