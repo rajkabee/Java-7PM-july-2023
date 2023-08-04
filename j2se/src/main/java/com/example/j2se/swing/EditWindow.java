@@ -102,9 +102,10 @@ public class EditWindow extends JFrame implements ActionListener{
 		form.add(mfdDateLabel);
 		dateModel = new UtilDateModel();
 		System.out.println(pd.getMfgDate());
-		//dateModel.setDate(1990, 11, 30);
-		dateModel.setDate(pd.getMfgDate().getYear()+1900,pd.getMfgDate().getMonth(), pd.getMfgDate().getDate() );
-		dateModel.setSelected(true);
+		if(pd.getMfgDate()!=null) {
+			dateModel.setDate(pd.getMfgDate().getYear()+1900,pd.getMfgDate().getMonth(), pd.getMfgDate().getDate() );
+			dateModel.setSelected(true);
+		}
 		datePanel = new JDatePanelImpl(dateModel);
 		datePicker = new JDatePickerImpl(datePanel);
 		datePicker.setTextEditable(true);
@@ -203,7 +204,6 @@ public class EditWindow extends JFrame implements ActionListener{
 			System.out.println(pd);
 			productDao.update(pd);
 			ArrayList<Product>products=productDao.getAll();
-			//this.formsWindow.tablePanel=new ProductTablePanel(formsWindow);
 			this.formsWindow.tablePanel.model.products=products;
 			this.formsWindow.tablePanel.model.fireTableDataChanged();
 			this.formsWindow.frame.invalidate();

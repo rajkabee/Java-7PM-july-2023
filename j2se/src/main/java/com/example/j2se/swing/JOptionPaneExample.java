@@ -15,9 +15,9 @@ public class JOptionPaneExample extends JFrame {
 				try {
 					JOptionPaneExample frame = new JOptionPaneExample();
 					//JOptionPane.showMessageDialog(frame, "Welcome to JOptionPane");
-					//JOptionPane.showMessageDialog(frame, "Successfully Updated", "Success", JOptionPane.QUESTION_MESSAGE);
-					String name = JOptionPane.showInputDialog("Enter your name: ");
-					System.out.println(name);
+					JOptionPane.showMessageDialog(frame, "Successfully Updated", "Success", JOptionPane.QUESTION_MESSAGE);
+					//String name = JOptionPane.showInputDialog("Enter your name: ");
+					//System.out.println(name);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();

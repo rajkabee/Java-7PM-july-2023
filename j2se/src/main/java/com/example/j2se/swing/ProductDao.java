@@ -49,5 +49,19 @@ public class ProductDao {
 		
 	}
 	
+	public String delete(Product pd) {
+		config();
+		if(tx.getStatus()==null) {
+			tx=session.beginTransaction();
+		}
+		session.delete(pd);
+		tx.commit();
+		session.close();
+		sf.close();
+		return "Done";
+		
+		
+	}
+	
 
 }
