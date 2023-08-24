@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	https://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="lp" class="com.endPointTech.springContext.objectInjection.Laptop">
+		<property name="id" value="3123" />
+		<property name="brand" value="Lenovo" />
+		<property name="model" value="Legion5" />
+	</bean>
+	<bean id="laptop" class="com.endPointTech.springContext.objectInjection.Laptop">
+		<property name="id" value="312334" />
+		<property name="brand" value="Hp" />
+		<property name="model" value="Specter 3" />
+	</bean>
+	<bean id="student"
+		class="com.endPointTech.springContext.objectInjection.Student">
+		<property name="id" value="123"/>
+		<property name="name" value="Bipin Raut" />
+		<property name="address" value="Lalitpur" />
+		<property name="active" value="true" />
+		<property name="laptop">
+			<bean class="com.endPointTech.springContext.objectInjection.Laptop">
+				<property name="id" value="24432" />
+				<property name="brand" value="Dell" />
+				<property name="model" value="3520" />
+			</bean>
+		</property>
+	</bean>
+	<!--<bean id="pupil"
+		class="com.endPointTech.springContext.objectInjection.Student">
+		<constructor-arg name="id" value="124" />
+		<constructor-arg name="name" value="Puskar Pandey" />
+		<constructor-arg name="address" value="Kathmandu" />
+		<constructor-arg name="active" value="true" />
+		<constructor-arg name="laptop" ref="lp" />
+	</bean>-->
+	<bean id="prajwol"
+		class="com.endPointTech.springContext.objectInjection.Student" 
+		autowire="constructor" 
+		init-method="init" 
+		destroy-method="destroy"
+		>
+		<!--scope="prototype" -->
+		<property name="id" value="118" />
+		<property name="name" value="Prajwol Subedi" />
+		<property name="address" value="Bhaktapur" />
+		<property name="active" value="true" />
+	</bean>
+	<bean class="com.endPointTech.springContext.objectInjection.DemoBeanPostProcessor"></bean>
+
+
+</beans>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+   <div class="container">
+    <div th:replace="~{courses :: header}"></div>
+    <h1 class="bg-secondary text-center p-1">Update Course</h1>
+    <div class="form row d-flex justify-content-around ">
+		<form name="course" action="/updateCourse" class="col-6 bg-info py-5" method="POST">
+            <!-- <input type="hidden" name="_method" value="PUT"> -->
+            <input type="hidden" name="id" th:value="${course.id}">
+            <div class="mb-3">
+              <label for="title" class="form-label">Course Title</label>
+              <input type="text" class="form-control" id="title" name="title" th:value="${course.title}">
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea class="form-control" id="description" name="description" cols="50" rows="5"  th:text="${course.description}"></textarea>
+            </div>
+            
+            <div class="mb-3">
+              <label for="price" class="form-label">Price</label>
+              <input type="text" class="form-control" id="price" name="price"  th:value="${course.price}">
+            </div>
+            
+            <input type="submit" class="btn btn-primary" value="submit">
+          </form>
+		
+		<div th:replace="~{courses :: footer}"></div>
+	</div>
+   </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</html>

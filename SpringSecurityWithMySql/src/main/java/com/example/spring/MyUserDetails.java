@@ -1,0 +1,73 @@
+package com.example.spring;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+public class MyUserDetails implements UserDetails {
+	String username;
+	String password;
+	boolean active;
+	boolean accountNonLocked;
+	boolean accountNonExpired;
+	boolean credentialsNonExpired;
+	List<GrantedAuthority> authorities;
+	
+	
+	
+	public MyUserDetails(User user) {
+		this.username=user.getUsername();
+		this.password=user.getPassword();
+		this.accountNonExpired=user.isAccountNonExpired();
+		this.accountNonLocked=user.isAccountNonLocked();
+		this.credentialsNonExpired=user.isCredentialsNonExpired();
+		this.active=user.isActive();
+		this.authorities = Arrays.asList(user.roles.split(","))
+							.stream()
+							.map(SimpleGrantedAuthority::new)
+							.collect(Collectors.toList());
+							
+	}
+	
+	
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		return authorities;
+	}
+
+	@Override
+	public String getPassword() {
+		return password;
+	}
+
+	@Override
+	public String getUsername() {
+		return username;
+	}
+
+	@Override
+	public boolean isAccountNonExpired() {
+		return accountNonExpired;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+		return accountNonLocked;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		return credentialsNonExpired;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		return active;
+	}
+
+}

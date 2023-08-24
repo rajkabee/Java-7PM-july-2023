@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+   <div class="container">
+    <h1 class="display-4 bg-primary text-center p-2">Courses</h1>
+	
+	<div class="form row d-flex justify-content-around ">
+		<form name="course" action="addCourse" class="col-6 bg-info py-5" method="POST">
+            <div class="mb-3">
+              <label for="title" class="form-label">Course Title</label>
+              <input type="text" class="form-control" id="title" name="title">
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea class="form-control" id="description" name="description" cols="50" rows="5"></textarea>
+            </div>
+            
+            <div class="mb-3">
+              <label for="price" class="form-label">Price</label>
+              <input type="text" class="form-control" id="price" name="price">
+            </div>
+            
+            <input type="submit" class="btn btn-primary" value="submit">
+          </form>
+		
+		
+	</div>
+	
+	
+   </div>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</html>

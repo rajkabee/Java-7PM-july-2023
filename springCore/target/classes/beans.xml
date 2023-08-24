@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	https://www.springframework.org/schema/beans/spring-beans.xsd">-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<<!--context:annotation-config/>-->
+	<!--<context:component-scan base-package="com.endPointTech.springCore"/>-->
+	<!--<context:property-placeholder  location="application.properties"/>-->
+	<!--<bean id="cmt" class="com.endPointTech.springCore.Comment">
+		<property name="userId" value="5675" />
+		<property name="id" value="987654" />
+		<property name="message" value="Will be there! Excited!" />
+	</bean>
+	<bean id="comment" class="com.endPointTech.springCore.Comment">
+		<property name="userId" value="567523" />
+		<property name="id" value="9876542" />
+		<property name="message" value="I wont be able to go!!" />
+	</bean>
+
+
+	<bean id="post" class="com.endPointTech.springCore.Post">
+		<constructor-arg name="userId" value="123" />
+		<constructor-arg name="id" value="543" />
+		<constructor-arg name="title" value="Class starts on sunday" />
+		<constructor-arg name="body"
+			value="classes for new session of BScIT starts this sunday" />
+		<constructor-arg name="comment">
+			<bean class="com.endPointTech.springCore.Comment">
+				<property name="userId" value="5435" />
+				<property name="id" value="325435" />
+				<property name="message" value="Got it!" />
+			</bean>
+		</constructor-arg>
+	</bean>
+	<bean id="post2" class="com.endPointTech.springCore.Post" autowire="byName">
+		<property name="userId" value="6543" />
+		<property name="id" value="789" />
+		<property name="title" value="Tour to Manakamana" />
+		<property name="body"
+			value="Group tour to manakamana has been organized at the beginning of next month" />
+		<property name="comment" ref="comment"/>
+	</bean>
+	<bean id="post3" class="com.endPointTech.springCore.Post">
+		<property name="userId" value="${post.userId}" />
+		<property name="id" value="${post.id}" />
+		<property name="title" value="${post.title}" />
+		<property name="body"
+			value="${post.body}" />
+	</bean>-->
+</beans>
