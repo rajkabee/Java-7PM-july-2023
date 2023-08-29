@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments::headElement}"></head>
+
+<body>
+	<div th:replace="~{fragments::header}"></div>
+	<div th:replace="~{fragments::carouselBlock}"></div>
+	<!--<h4 th:text="${items}"></h4>-->
+	<div id="mainBody">
+		<div class="container">
+			<div class="row">
+				<div th:replace="~{fragments::sidebar}"></div>
+				<div class="span9">
+					<div th:replace="~{fragments::featuredProducts}" class="well well-small"></div>
+					<div th:replace="~{fragments::latestProducts(items=${items})}"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div th:replace="~{fragments::footer}"></div>
+	<div th:replace="~{fragments::jsImports}"></div>
+
+
+
+</body>
+
+</html>
