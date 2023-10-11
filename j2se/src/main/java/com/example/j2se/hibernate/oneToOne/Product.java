@@ -24,7 +24,7 @@ public class Product {
 
 	@Column(name="product_price")
 	private float price;
-	@OneToOne(mappedBy = "product")
+	@OneToOne//(mappedBy = "product")
 	Category category;
 	
 	public Product(int id, String name, String description, float price) {

@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class App {
 	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
-		UserDao userDao = new UserDao();
+		DAO dao = new UserDao();
 		char ch;
 		System.out.println("-------MAIN MENU-------");
 		System.out.println("a. Add a user");
@@ -21,7 +21,7 @@ public class App {
 		
 		if(ch=='a') {
 			User user = getUserDetails();
-			int i = userDao.save(user);
+			int i = dao.save(user);
 			if(i==0) {
 				System.out.println("Insertsion failed!");
 			}
@@ -32,12 +32,12 @@ public class App {
 		else if(ch=='b') {
 			System.out.println("Enter the id: ");
 			int id = sc.nextInt();
-			User user = userDao.getOne(id);
+			User user = (User) dao.getOne(id);
 			System.out.println(user);
 		}
 		else if(ch=='c') {
 			System.out.println("Users List: ");
-			List<User> users = userDao.getAll();
+			List<User> users = dao.getAll();
 			if(!users.isEmpty()) {
 				users.forEach(System.out::println);
 			}

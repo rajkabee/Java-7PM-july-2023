@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:property-placeholder
+		location="application.properties" />
+	<bean id="product"
+		class="com.rajkabee.spring.di.objectInjection.Product">
+		<property name="id" value="${product.id}" />
+		<property name="name" value="${product.name}" />
+		<property name="price" value="${product.price}" />
+		<property name="category">
+			<bean class="com.rajkabee.spring.di.objectInjection.Category">
+				<property name="id" value="${category.id}" />
+				<property name="name" value="${category.name}" />
+			</bean>
+		</property>
+	</bean>
+	
+
+	<bean id="pd"
+		class="com.rajkabee.spring.di.objectInjection.Product" autowire="constructor">
+		<constructor-arg name="id" value="121" />
+		<constructor-arg name="name" value="note book" />
+		<constructor-arg name="price" value="101" />
+	 	<!-- <property name="category" ref="category" />  -->
+	</bean>
+
+	<bean id="category"
+		class="com.rajkabee.spring.di.objectInjection.Category">
+		<property name="id" value="2" />
+		<property name="name" value="notebooks" />
+	</bean>
+	<bean id="cat"
+		class="com.rajkabee.spring.di.objectInjection.Category">
+		<property name="id" value="3" />
+		<property name="name" value="Books" />
+	</bean>
+
+
+
+
+</beans>

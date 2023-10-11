@@ -12,7 +12,7 @@
 	<<!--context:annotation-config/>-->
 	<!--<context:component-scan base-package="com.endPointTech.springCore"/>-->
 	<!--<context:property-placeholder  location="application.properties"/>-->
-	<!--<bean id="cmt" class="com.endPointTech.springCore.Comment">
+	<bean id="cmt" class="com.endPointTech.springCore.Comment">
 		<property name="userId" value="5675" />
 		<property name="id" value="987654" />
 		<property name="message" value="Will be there! Excited!" />
@@ -52,5 +52,5 @@
 		<property name="title" value="${post.title}" />
 		<property name="body"
 			value="${post.body}" />
-	</bean>-->
+	</bean>
 </beans>

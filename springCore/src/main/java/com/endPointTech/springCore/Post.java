@@ -15,8 +15,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 
-@AllArgsConstructor
-@NoArgsConstructor
+
 @ToString
 @Component("post2")
 public class Post {
@@ -28,6 +27,10 @@ public class Post {
 	@Autowired
 	@Qualifier("comment2")
 	Comment comment;
+	
+	
+	
+	
 	@Value("${post.userId}")
 	public void setUserId(int userId) {
 		this.userId = userId;
@@ -55,6 +58,19 @@ public class Post {
 	private void destroy() {
 		System.out.println("Post bean destroyed!");
 	}
+	public Post(int userId, int id, String title, String body, Comment comment) {
+		super();
+		this.userId = userId;
+		this.id = id;
+		this.title = title;
+		this.body = body;
+		this.comment = comment;
+	}
+	public Post() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
 	
 	
 }
