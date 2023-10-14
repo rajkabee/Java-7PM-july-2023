@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.spring.security.jwt.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -7,6 +7,9 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+import com.example.spring.security.jwt.filter.JwtAuthenticationFilter;
+import com.example.spring.security.jwt.util.JwtAuthenticationEntryPoint;
 
 @Configuration
 public class SecurityConfig {
@@ -22,8 +25,8 @@ public class SecurityConfig {
 
         http.csrf(csrf -> csrf.disable())
                 .authorizeRequests()
-                .requestMatchers("/user", "/admin", "/").authenticated()
-                .requestMatchers("/auth/login").permitAll()
+                .requestMatchers("/user", "/admin", "/","/api/v1/**").authenticated()
+                .requestMatchers("/auth/login","/addusers").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and().exceptionHandling(ex -> ex.authenticationEntryPoint(point))
