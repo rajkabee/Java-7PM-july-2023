@@ -1,4 +1,4 @@
-package com.example.spring.addresses;
+package com.example.spring.addresses.model;
 
 import com.example.spring.common.PersistenceEntity;
 
@@ -40,4 +40,14 @@ public class Address extends PersistenceEntity{
 	
 	@Column(name="house_number")
 	String houseNumber;
+
+	public Address(AddressRequestDTO add) {
+		this.country = add.getCountry();
+		this.state = add.getState();
+		this.city = add.getCity();
+		this.street = add.getStreet();
+		this.houseNumber = add.getHouseNumber();
+	}
+	
+	
 }

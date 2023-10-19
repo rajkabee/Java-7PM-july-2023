@@ -2,7 +2,7 @@ package com.example.spring.destinations;
 
 import java.util.List;
 
-import com.example.spring.addresses.Address;
+import com.example.spring.addresses.model.Address;
 import com.example.spring.blogs.Blog;
 import com.example.spring.common.PersistenceEntity;
 

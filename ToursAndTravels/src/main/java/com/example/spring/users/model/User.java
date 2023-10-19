@@ -1,4 +1,4 @@
-package com.example.spring.security.jwt.model;
+package com.example.spring.users.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -26,4 +26,9 @@ public class User {
 	private String password;
 	private String roles;
 	private boolean active;
+	
+	public User(UserRequestDTO req) {
+		this.username = req.getUsername();
+		this.password = req.getPassword();
+	}
 }

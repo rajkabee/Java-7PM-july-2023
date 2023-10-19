@@ -5,10 +5,16 @@ spring:
     password: root
   data:
     rest:
-      basePath: /api/v1/
+      basePath: /restapi/v1/
   jpa:
     properties:
       hibernate:
         hbm2ddl:
           auto: update
     show-sql: true
+    
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE

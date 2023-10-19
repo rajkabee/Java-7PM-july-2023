@@ -25,8 +25,8 @@ public class Comment extends PersistenceEntity{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
 	Long id;
-	@Column(name="from")
-	String from;
+	@Column(name="commentor")
+	String commentor;
 	@Column(name="content")
 	String content;
 }

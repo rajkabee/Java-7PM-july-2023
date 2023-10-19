@@ -9,8 +9,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.example.spring.security.jwt.model.MyUserDetails;
-import com.example.spring.security.jwt.model.User;
-import com.example.spring.security.jwt.repos.UserRepository;
+import com.example.spring.users.model.User;
+import com.example.spring.users.repos.UserRepository;
 @Service
 public class MyUserDetailsService implements UserDetailsService {
 

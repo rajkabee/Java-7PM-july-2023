@@ -5,8 +5,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.spring.security.jwt.model.User;
-import com.example.spring.security.jwt.repos.UserRepository;
+import com.example.spring.users.model.User;
+import com.example.spring.users.repos.UserRepository;
 
 @RestController
 public class MyController {
