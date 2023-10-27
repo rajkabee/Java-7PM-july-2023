@@ -44,4 +44,5 @@ public class Category {
 	
 	@OneToMany(mappedBy = "category")
 	List<Product> products;
+	//comment
 }
